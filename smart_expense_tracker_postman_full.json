@@ -1,0 +1,295 @@
+{
+  "info": {
+    "name": "Smart Expense Tracker API (Full CRUD)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "List Categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Category",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Food\"}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "categories",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Category by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Category",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"name\": \"Updated Food\"}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/categories/1/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "categories",
+                "1",
+                ""
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Expenses",
+      "item": [
+        {
+          "name": "List Expenses",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/expenses/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "expenses",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Expense",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Lunch\", \"amount\": 250, \"category_id\": 1}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/expenses/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "expenses",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Expense by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/expenses/1/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "expenses",
+                "1",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Expense",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"title\": \"Dinner\", \"amount\": 500, \"category_id\": 1}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/expenses/1/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "expenses",
+                "1",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Delete Expense",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/expenses/1/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "expenses",
+                "1",
+                ""
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Reports",
+      "item": [
+        {
+          "name": "Monthly Report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reports/monthly/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "monthly",
+                ""
+              ]
+            }
+          }
+        },
+        {
+          "name": "Category Report",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reports/category/",
+              "protocol": "http",
+              "host": [
+                "127.0.0.1:8000"
+              ],
+              "path": [
+                "api",
+                "reports",
+                "category",
+                ""
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
